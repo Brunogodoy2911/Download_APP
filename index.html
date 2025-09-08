@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download do App Comprar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/brunogodoy/icon.png?updatedAt=1757296149977"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md mx-auto bg-white rounded-xl shadow-lg p-8 m-4">
+      <!-- Cabeçalho -->
+      <div class="text-center mb-8">
+        <div
+          class="w-24 h-24 mx-auto bg-gray-200 rounded-2xl mb-4 flex items-center justify-center"
+        >
+          <img
+            src="https://ik.imagekit.io/brunogodoy/icon.png?updatedAt=1757296149977"
+            alt="Ícone do App"
+            class="rounded-2xl"
+          />
+        </div>
+        <h1 class="text-3xl font-bold text-gray-800">Comprar</h1>
+        <p class="text-gray-500 mt-2">Versão 1.0.0</p>
+      </div>
+
+      <!-- Botão de Download -->
+      <div class="mb-6">
+        <!-- OPÇÃO DE DOWNLOAD DIRETO -->
+        <!-- Para usar:
+                 1. Envie seu arquivo .apk para a mesma pasta que este arquivo .html.
+                 2. Substitua 'SEU_ARQUIVO.apk' pelo nome real do seu arquivo. 
+            -->
+        <a
+          href="comprar.apk"
+          download
+          class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Baixar APK para Android
+        </a>
+
+        <p class="text-xs text-gray-400 text-center mt-2">
+          Você precisará habilitar a instalação de fontes desconhecidas.
+        </p>
+      </div>
+
+      <!-- Instruções de Instalação -->
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+        <details open>
+          <!-- A tag 'open' deixa as instruções visíveis por padrão -->
+          <summary class="font-semibold text-gray-700 cursor-pointer list-none">
+            <div class="flex items-center justify-between">
+              <span>Como Instalar?</span>
+              <!-- Ícone de seta -->
+              <svg
+                class="w-5 h-5 transition-transform transform"
+                id="chevron-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </summary>
+          <div class="mt-4 text-sm text-gray-600 space-y-3">
+            <p>
+              <strong>1. Baixe o arquivo:</strong> Clique no botão de download
+              acima.
+            </p>
+            <p>
+              <strong>2. Abra o arquivo:</strong> Após o download, abra o
+              arquivo APK (geralmente na sua barra de notificações ou pasta de
+              downloads).
+            </p>
+            <p>
+              <strong>3. Permita fontes desconhecidas:</strong> O Android pedirá
+              uma permissão de segurança. Toque em "Configurações" e habilite a
+              opção "Permitir desta fonte" ou "Fontes desconhecidas".
+            </p>
+            <p>
+              <strong>4. Instale:</strong> Volte para a tela de instalação e
+              clique em "Instalar".
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Rodapé -->
+      <div class="text-center mt-8">
+        <p class="text-xs text-gray-400">&copy; 2025 Bruno Godoy</p>
+      </div>
+    </div>
+
+    <script>
+      // Pequeno script para animar o ícone de expandir/recolher
+      const details = document.querySelector("details");
+      const chevron = document.getElementById("chevron-icon");
+
+      // Inicia com o ícone "aberto" (apontando para cima)
+      if (details.open) {
+        chevron.style.transform = "rotate(180deg)";
+      }
+
+      details.addEventListener("toggle", function () {
+        if (details.open) {
+          chevron.style.transform = "rotate(180deg)";
+        } else {
+          chevron.style.transform = "rotate(0deg)";
+        }
+      });
+    </script>
+  </body>
+</html>
